@@ -1,0 +1,159 @@
+/* Contact style */
+
+:root {
+  --primary-color: rgba(13, 110, 139, 0.75);
+  --secondary-color: rgba(0, 229, 187, 0.9);
+  --overlay-color: rgba(24, 39, 51 , 0.85);
+  --menu-speed: 0.75s;
+}
+
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+body {
+   font-family: Calibri;
+   background: #d5f2ff;
+   /* background: linear-gradient(#d5f2ff, #f9f7ff); */
+}
+
+.flex-container {
+   /* Enables Flexbox for the container - Defaults to Row */
+   display: flex;
+   /* Works along the main axis: Row hor. - Col ver. */
+   justify-content: space-evenly; 
+   /* Works along the cross axis: Row ver. - Col hor. */
+   align-items: center;
+   
+   gap: 50px;
+   width: 100%;   /* Ensures the container spans the full width of its parent */
+   height: 100vh; /* Makes the container take up the full viewport height */
+}
+
+/* Selector list combinator are comma separated */
+/* Defines a single set of styles for multiple elements */
+.panel-left,
+.panel-right {
+   flex: 1;    /* Each child takes up an equal share of the available space */
+}
+
+.panel-left {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+}
+
+.panel-left-title,
+.panel-left-subtitle {
+   font-weight: 600;
+   color: #75ff4f;
+   font-size: 40px;
+   margin-bottom: 5px;
+}
+
+.panel-left-text {
+   width: 600px;
+}
+
+.panel-left-text p {
+   margin-bottom: 20px;
+}
+
+.panel-left-button {
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
+
+a {
+   text-decoration: none;
+}
+
+.btn {
+   display: flex;
+   align-items: center;
+   padding: 15px 30px;
+   font-size: 16px;
+   color: #fff;
+   font-weight: 600;
+   gap: 10px;
+   border: none;
+   border-radius: 50px;
+   background: linear-gradient(270deg, #75ff4f, #6dfaf1);
+   cursor: pointer;
+}
+
+/* .btn (ancestor selector) img (descendant selector) */
+.btn img {
+   height: 15px;
+}
+
+.panel-right img {
+   width: 500px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+/* Contact us page */
+.contact-inputs {
+   width: 400px;
+   height: 50px;
+   border: none;
+   outline: none;
+   padding-left: 25px;
+   font-weight: 500;
+   color: #666;
+   border-radius: 50px;
+}
+
+.contact-left textarea {
+   height: 140px;
+   padding-top: 15px;
+   border-radius: 20px;
+}
+
+.contact-inputs:focus {
+   border: 2px solid #ff994f;
+}
+
+.contact-inputs::placeholder {
+   color: #a9a9a9;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1.5s ease-in-out forwards;
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.5s; }
+.fade-in:nth-child(2) { animation-delay: 1.0s; }
+.fade-in:nth-child(3) { animation-delay: 1.5s; }
+.fade-in:nth-child(4) { animation-delay: 2.0s; }
+
+@media (max-width:800px) {
+   .contact-inputs {
+      width: 80vw;
+   }
+
+   .contact-right {
+      display: none;
+   }
+}
