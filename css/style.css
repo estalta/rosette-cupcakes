@@ -267,7 +267,7 @@ h1, h2, h3, h4, h5, h5, h6 {
 /* Cover the surface of the image with text. */
 #showcase::before {
     content: '';
-    background: url('/img/gerencia.jpg') no-repeat center center/contain;
+    background: url('../img/gerencia.jpg') no-repeat center center/contain;
     position: absolute;
     top: 0;
     left: 0;
